@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #343a40;
+
+  background: linear-gradient(180deg, #343a40 0%, #212529 100%);
+
+  background: -moz-linear-gradient(180deg, #343a40 0%, #212529 100%);
+
+  background: -webkit-linear-gradient(180deg, #343a40 0%, #212529 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#343a40", endColorstr="#212529", GradientType=1 );
+}
+.watch-container {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  background-color: #000;
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.watch-face {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.analog-display {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  width: 4px;
+  background-color: #000;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  height: 45px;
+  top: 69px;
+  transition: all 0.3s ease-in-out;
+}
+
+.minute-hand {
+  height: 60px;
+  top: 53px;
+  transition: all 0.3s ease-in-out;
+}
+
+.second-hand {
+  height: 60px;
+  top: 53px;
+  background-color: red;
+}
+
+.digital-display {
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.crown {
+  position: absolute;
+  right: -10px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pill {
+  position: absolute;
+  right: -5px;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.strap {
+  width: 120px;
+  height: 240px;
+  background-color: #25242c;
+}
+
+.strap-one {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.strap-two {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #25242c;
+  z-index: -1;
+}
+.circle-one {
+  transform: translate(-10px, 15px);
+}
+.circle-two {
+  transform: translate(10px, 15px);
+}
+.circle-three {
+  transform: translate(-10px, -15px);
+}
+.circle-four {
+  transform: translate(10px, -15px);
+}
+#vertical-numbers {
+  width: max-content;
+  height: 100%;
+  transition: color 0.3s ease-in-out;
+}
+#horizontal-numbers {
+  width: 100%;
+  height: max-content;
+  transition: color 0.3s ease-in-out;
+}
+.numbers p {
+  transition: color 0.3s ease-in-out;
+}
+.dark .analog-display {
+  background-color: #000;
+}
+.dark .analog-display .hour-hand,
+.dark .analog-display .minute-hand {
+  background-color: #fff;
+}
+.dark .numbers p {
+  color: #fff;
+}
+.dark .digital-display {
+  background-color: #000;
+  color: #fff;
+}
